@@ -12,6 +12,7 @@ public class AdvisorDelegate implements JavaDelegate {
         delegateExecution.setVariable("advisorProposal", advisorProp);
         boolean isAdvisor= true;
         delegateExecution.setVariable("isAdvisor", isAdvisor);
+        System.out.println("I am an Advisor");
 
     }
 }

@@ -12,5 +12,7 @@ public class StudentDelegate implements JavaDelegate {
         delegateExecution.setVariable("studentProposal", studentProp);
         boolean isStudent= true;
         delegateExecution.setVariable("isStudent", isStudent);
+        System.out.println("I am a Student");
+
     }
 }
