@@ -198,6 +198,31 @@ a {
     text-align: center
 }
 </style>
+    <script>
+
+function startTheProject ( )
+{
+
+    let variables= {
+            project: {
+                    value: {
+                        name:"fypProposal",
+                        description: "fypProposal",
+                        email: "fypProposal"
+                    }
+                }
+            }
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST","http://localhost:8080/engine-rest/process-definition/key/fypProposal/start");
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+       variables
+    }));
+    location.href='/login'
+    window.alert("Window Calling for Project");
+}
+
+</script>
 </head>
 <body>
 <div class="row">
@@ -207,7 +232,7 @@ a {
                 <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">CALL FOR PROJECT</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
                     <div class="login-space">
                         <div class="login">
-                            <div class="group"> <input type="button" class="button" value="Start the Process" onclick="location.href='/login'"> </div>
+                            <div class="group"> <input type="button" class="button" value="Start the Process" onclick="startTheProject()"> </div>
                         </div>
                         <div class="sign-up-form">
                         </div>

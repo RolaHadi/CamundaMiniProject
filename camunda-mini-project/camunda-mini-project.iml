@@ -10,6 +10,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-external-task-client:7.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.camunda.bpm:camunda-external-task-client-spring:7.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.camunda.bpm:camunda-external-task-client:7.16.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.14" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
     <orderEntry type="library" name="Maven: org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-rest:7.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter:7.16.0" level="project" />
     <orderEntry type="library" name="Maven: org.camunda.bpm:camunda-engine-spring:7.16.0" level="project" />

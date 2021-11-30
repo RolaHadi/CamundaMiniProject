@@ -10,5 +10,10 @@ public class CommitteeApprovalDelegate implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         boolean isApproved= Math.random() < 0.5;
         delegateExecution.setVariable("approved",isApproved);
+        if(isApproved){
+            System.out.println("Project Approved");
+        }else{
+            System.out.println("Project Rejected");
+        }
     }
 }

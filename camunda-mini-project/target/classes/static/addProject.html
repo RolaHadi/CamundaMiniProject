@@ -197,6 +197,31 @@ a {
     text-align: center
 }
 </style>
+    <script>
+
+    function sendProject ( )
+    {
+
+    let variables= {
+    projectForm: {
+    value: {
+    title:document.getElementById('title').value,
+    desciption : document.getElementById('desciption').value,
+    advisor :document.getElementById('advisor').value,
+    nb_student :document.getElementById('nb_student').value
+    }
+    }
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.open("PUT","http://localhost:8080/engine-rest/process-instance?variables=projectForm");
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+    variables
+    }));
+    window.alert(variables.projectForm.value.title + " submited ! ");
+    }
+
+</script>
 </head>
 <body>
 <div class="row">
@@ -210,7 +235,7 @@ a {
                             <div class="group"> <label for="desciption" class="label">Description</label> <textarea id="desciption" rows="4" class="input"  placeholder="Enter a Description of the Project"> </textarea> </div>
                             <div class="group"> <label for="advisor" class="label">Advisor Name</label> <input id="advisor" type="text" class="input" placeholder="Enter The Advisor Name"> </div>
                             <div class="group"> <label for="nb_student" class="label">Number of Students</label> <input id="nb_student" type="text" class="input" placeholder="Enter The Number of Student"> </div>
-                            <div class="group"> <input type="submit" class="button" value="Submit Project"  > </div>
+                            <div class="group"> <input type="button" class="button" value="Submit Project" onclick="sendProject()"  > </div>
                         </div>
                         <div class="sign-up-form">
                         </div>

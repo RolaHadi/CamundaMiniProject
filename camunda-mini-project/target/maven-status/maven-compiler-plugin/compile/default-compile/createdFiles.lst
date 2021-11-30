@@ -1,8 +1,8 @@
 com\example\workflow\delegates\CallForProjectDelegate.class
-com\example\workflow\delegates\MoodlePublishingDelegate.class
+com\example\workflow\controllers\FypController.class
 com\example\workflow\delegates\LoginDelegate.class
+com\example\workflow\delegates\CommitteeApprovalDelegate.class
+com\example\workflow\delegates\MoodlePublishingDelegate.class
 com\example\workflow\delegates\AdvisorDelegate.class
 com\example\workflow\delegates\StudentDelegate.class
-com\example\workflow\controllers\CallForProjectController.class
 com\example\workflow\Application.class
-com\example\workflow\delegates\CommitteeApprovalDelegate.class

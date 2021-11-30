@@ -197,6 +197,34 @@ a {
     text-align: center
 }
 </style>
+    <script>
+
+function getTheForm ( )
+{
+
+let variables= {
+            loginForm: {
+                    value: {
+                        user:document.getElementById('user').value,
+                        isAdvisor : document.getElementById('advisor').value,
+                        isStudent :document.getElementById('student').value,
+
+                    }
+                }
+            }
+    var xhr = new XMLHttpRequest();
+    xhr.open("PUT","http://localhost:8080/engine-rest/process-instance?variables=loginForm");
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+       variables
+    }));
+
+    location.href='/add_project'
+    window.alert("Submitted");
+
+}
+
+</script>
 </head>
 <body>
 <div class="row">
@@ -206,11 +234,13 @@ a {
                 <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
                     <div class="login-space">
                         <div class="login">
+                            <form id="login">
                             <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Enter your username"> </div>
                             <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
                             <div class="group"> <input id="advisor" type="checkbox" class="check" checked> <label for="advisor"><span class="icon"></span> I am an Advisor</label> </div>
                             <div class="group"> <input id="student" type="checkbox" class="check" > <label for="student"><span class="icon"></span> I am a Student</label> </div>
-                            <div class="group"> <input type="button" class="button" value="Sign In" onclick="location.href='../add_project'"> </div>
+                            <div class="group"> <input type="button" class="button" value="Sign In" onclick="getTheForm()"> </div>
+                            </form>
                         </div>
                         <div class="sign-up-form">
                         </div>
